@@ -1,6 +1,6 @@
 import * as mongoose from "mongoose";
-import ModelRepo from "./ModelRepo";
 import BaseModel from "./BaseModel";
+import ModelRepo from "./ModelRepo";
 
 export function getClassName(constructor: () => any): string {
     return constructor.name;

@@ -36,19 +36,24 @@ function tsc() {
     });
 }
 
-gulp.task("watch-typescript", function(){
-    gulp.watch("./**/*.ts", function(event) {
-        out("Compiling scripts..".yellow);
-        lint()
-            .then(tsc)
-            .then(function(){
-                return new Promise(function(resolve, reject) {
-                    out("Compiling scripts done.".green);
-                });
-            })
-            .catch(function(err){
-                console.log(err);
+function runCompilation() {
+    out("Compiling scripts..".yellow);
+    return lint()
+        .then(tsc)
+        .then(function(){
+            return new Promise(function(resolve, reject) {
+                out("Compiling scripts done.".green);
             });
+        })
+        .catch(function(err){
+            console.log(err);
+        });
+}
+
+gulp.task("watch-typescript", function(){
+    runCompilation();
+    gulp.watch("src/**/*.ts", function(event) {
+        runCompilation();
     });
 });
 

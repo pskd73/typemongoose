@@ -12,12 +12,13 @@
         "experimentalDecorators": true,
         "outDir": "lib",
         "sourceMap": true,
+        "declaration": true,
         "lib": [
             "ES2016"
         ]
     },
     "include": [
-        "**/*"
+        "src/**/*"
     ],
     "exclude": [
         "node_modules",

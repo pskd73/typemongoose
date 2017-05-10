@@ -5,5 +5,5 @@ import * as ModelRepo from "./ModelRepo";
 export {
     BaseModel,
     Decorators,
-    ModelRepo
+    ModelRepo,
 };

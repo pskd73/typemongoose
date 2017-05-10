@@ -1,4 +1,4 @@
-import { Document, Query, model } from "mongoose";
+import { Document } from "mongoose";
 
 abstract class BaseModel implements Document {
     public abstract increment;
