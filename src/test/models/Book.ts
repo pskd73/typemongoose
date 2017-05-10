@@ -15,7 +15,7 @@ export abstract class Book extends BaseModel {
 
 }
 
-class RBook extends ModelRepo<Book> {
+export class RBook extends ModelRepo<Book> {
 
     protected getModelName() {
         return "Book";
@@ -23,5 +23,5 @@ class RBook extends ModelRepo<Book> {
 
 }
 
-const BookRepo = new RBook()
+const BookRepo = new RBook();
 export default BookRepo;

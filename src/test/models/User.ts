@@ -29,14 +29,14 @@ export abstract class User extends BaseModel {
 
 }
 
-class RUser extends ModelRepo<User> {
-
-    protected getModelName() {
-        return "User";
-    }
+export class RUser extends ModelRepo<User> {
 
     public async getAllObjects(): Promise<User[]> {
         return this.query.find({});
+    }
+
+    protected getModelName() {
+        return "User";
     }
 
 }
