@@ -13,6 +13,10 @@
     "watch": "gulp",
     "prepublishOnly": "npm run build && npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pskd73/typemongoose"
+  },
   "author": "Pramod Kumar",
   "license": "MIT",
   "dependencies": {
