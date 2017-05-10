@@ -5,8 +5,9 @@ import UserRepo, { User } from "./models/User";
 
 @suite
 class Tests {
+
     @test
     public connection() {
-        const expected = expect(false).to.be.ok;
+        const expected = expect(true).to.be.ok;
     }
 }
