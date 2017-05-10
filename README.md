@@ -4,9 +4,8 @@ Typescript wrapper for mongoose library
 It makes use of decorators. Check the example below
 ```
 import * as mongoose from "mongoose";
-import BaseModel from "../../BaseModel";
-import { Member, Method, Model } from "../../Decorators";
-import ModelRepo from "../../ModelRepo";
+import { BaseModel, Decorators, ModelRepo } from "typemongoose";
+const { Member, Method, Model } = Decorators;
 
 @Model<User>()
 export abstract class User extends BaseModel {
