@@ -48,7 +48,7 @@ class RUser extends ModelRepo<User> {
 const UserRepo = new RUser();
 ```
 
-Here we have two type of objects
+Here you have two type of objects
 1. ```User```
   It is the base object you will get when query. You can define methods to it assigning decorator.
 2. ```UserRepo```
@@ -58,7 +58,7 @@ Here we have two type of objects
 const all = await UserRepo.query.find({});
 const user = await UserRepo.query.findOne({...});
 ```
-When we have reference objects, we can define them as below
+When you have reference members, you can define them as below
 ```
 @Model<Book>()
 export abstract class Book extends BaseModel {
@@ -93,4 +93,13 @@ const book = BookRepo.findOne({});
 const user: String = book.user.toString(); // it will be id now
 ```
 Note:
-- The object (```User```) should be abstract. The reason is, mongoose itself creates a object extending the class we provide
+- The object (```User```) should be abstract. The reason is, mongoose itself creates a object, extending the class we provide
+- To create new object you can do as explained below
+```
+const user = UserRepo.create({...}); // save will get automatically
+```
+or
+```
+const user = new UserRepo.query({...});
+user.save();
+```
