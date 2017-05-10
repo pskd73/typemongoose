@@ -1,0 +1,24 @@
+{
+  "name": "typemongoose",
+  "version": "1.0.0",
+  "description": "Typescript ORM for mongoose",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "NODE_PATH=./ node lib/index.js",
+    "dev": "NODE_PATH=./ nodemon lib/index.js",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "build": "tsc",
+    "watch": "gulp"
+  },
+  "author": "Pramod Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "@types/mongoose": "^4.7.11",
+    "colors": "^1.1.2",
+    "mongoose": "^4.9.8",
+    "nodemon": "^1.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.3.2"
+  }
+}

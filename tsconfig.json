@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "baseUrl": ".",
+        "rootDirs": ["app"],
+        "paths": {
+            "app/*": ["./src/*"]
+        },
+        "noResolve": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "outDir": "lib",
+        "sourceMap": true,
+        "lib": [
+            "ES2016"
+        ]
+    },
+    "include": [
+        "**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts",
+        "lib"
+    ]
+}
