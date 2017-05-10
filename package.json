@@ -7,7 +7,7 @@
   "scripts": {
     "start": "NODE_PATH=./ node lib/index.js",
     "dev": "NODE_PATH=./ nodemon lib/index.js",
-    "test": "npm run lint && mocha lib/test/index.js",
+    "test": "npm run build && npm run lint && mocha lib/test/index.js",
     "lint": "tslint -c tslint.json \"src/**/*.ts\"",
     "build": "tsc",
     "watch": "gulp",
