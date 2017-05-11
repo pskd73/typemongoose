@@ -85,6 +85,12 @@ const user = new UserRepo.query({...});
 user.save();
 ```
 - You can define hooks as explained above. Hooke type can be `HookTypes.pre` or `HookTypes.post` and hooks can be `Hooks.init`, `Hooks.remove`, `Hooks.save`, `Hooks.update` and `Hooks.validate`
+- If you do not want to have new repo for the model, you can use ```BasicRepo``` as explained below
+```
+import { BasicRepo } from "typemongoose";
+class Book extends ... {...};
+const BookRepo = new BasicRepo(Book);
+```
 
 Here you have two type of objects
 1. ```User```

@@ -1,7 +1,7 @@
 import * as mongoose from "mongoose";
 import BaseModel from "../../BaseModel";
+import BasicRepo from "../../BasicRepo";
 import { Hook, Hooks, HookTypes, Member, Method, Model } from "../../Decorators";
-import ModelRepo from "../../ModelRepo";
 import { User } from "./User";
 
 @Model<Book>()
@@ -29,13 +29,4 @@ export abstract class Book extends BaseModel {
 
 }
 
-export class RBook extends ModelRepo<Book> {
-
-    protected getModelName() {
-        return "Book";
-    }
-
-}
-
-const BookRepo = new RBook();
-export default BookRepo;
+export default new BasicRepo(Book);

@@ -35,11 +35,6 @@ export class RUser extends ModelRepo<User> {
         return this.query.find({});
     }
 
-    protected getModelName() {
-        return "User";
-    }
-
 }
 
-const UserRepo = new RUser();
-export default UserRepo;
+export default new RUser(User);
