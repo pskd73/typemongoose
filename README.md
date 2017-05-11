@@ -1,6 +1,11 @@
 # typemongoose
 Typescript wrapper for mongoose library
 
+## Installation
+```
+npm install --save typemongoose
+```
+
 It makes use of decorators. Check the example below
 ```
 import * as mongoose from "mongoose";
@@ -92,7 +97,7 @@ Or
 const book = BookRepo.findOne({});
 const user: String = book.user.toString(); // it will be id now
 ```
-Note:
+## Note:
 - The object (```User```) should be abstract. The reason is, mongoose itself creates a object, extending the class we provide
 - To create new object you can do as explained below
 ```
