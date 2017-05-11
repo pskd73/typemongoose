@@ -34,4 +34,11 @@ class Tests {
         const e = expect(name).to.equal("Test");
     }
 
+    @test
+    public async testHooks() {
+        const book = await BookRepo.create({ name: "Test book" });
+        const e1 = expect(book.created_at).to.be.ok;
+        const e2 = expect(book.updated_at).to.be.ok;
+    }
+
 }
