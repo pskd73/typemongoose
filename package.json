@@ -21,15 +21,15 @@
   "license": "MIT",
   "dependencies": {
     "@types/mongoose": "^4.7.11",
-    "colors": "^1.1.2",
-    "mongoose": "^4.9.8",
-    "nodemon": "^1.11.0"
+    "mongoose": "^4.9.8"
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
     "chai": "^3.5.0",
     "mocha": "^3.3.0",
     "mocha-typescript": "^1.1.2",
-    "typescript": "^2.3.2"
+    "typescript": "^2.3.2",
+    "nodemon": "^1.11.0",
+    "colors": "^1.1.2"
   }
 }
